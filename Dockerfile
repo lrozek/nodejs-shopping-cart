@@ -5,16 +5,16 @@ ARG APP_WORKING_DIR=/usr/src/app
 WORKDIR ${APP_WORKING_DIR}
 
 
-ADD package*.json /tmp/
+COPY package*.json /tmp/
 RUN cd /tmp && npm install && mv /tmp/node_modules ${APP_WORKING_DIR}
 
-ADD bin bin
-ADD data data
-ADD models models
-ADD public public
-ADD routes routes
-ADD views views
-ADD app.js app.js
+COPY bin bin
+COPY data data
+COPY models models
+COPY public public
+COPY routes routes
+COPY views views
+COPY app.js app.js
 
 EXPOSE 3000
 
