@@ -25,6 +25,16 @@ For Nodemon usage
 nodemon ./bin/www
 ```
 
+how to build it with docker
+``` shell
+docker build -t lrozek/nodejs-shopping-cart https://github.com/lrozek/nodejs-shopping-cart.git
+```
+
+how to run it with docker
+``` shell
+docker run -it -p 3000:3000 --rm --init lrozek/nodejs-shopping-cart
+```
+
 ### Technologies
 NodeJS, Express, Express-Session, Nodemon, hbs - Express.js view engine for handlebars.js
 
